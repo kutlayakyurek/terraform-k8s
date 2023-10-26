@@ -32,3 +32,14 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# Ignore Lock File
+.terraform.lock.hcl
+
+# Idea
+.idea/**
+
+# Ansible
+ansible.cfg
+inventory
+playbook.yml
