@@ -302,19 +302,19 @@ variable "rke2_download_kubeconf_path" {
 # Default Ansible Inventory Group name for RKE2 cluster
 variable "rke2_cluster_group_name" {
   type    = string
-  default = ""
+  default = "k8s_cluster"
 }
 
 # Default Ansible Inventory Group name for RKE2 Servers
 variable "rke2_servers_group_name" {
   type    = string
-  default = ""
+  default = "masters"
 }
 
 # Default Ansible Inventory Group name for RKE2 Agents
 variable "rke2_agents_group_name" {
   type    = string
-  default = ""
+  default = "workers"
 }
 
 # Cordon, drain the node which is being upgraded. Uncordon the node once the RKE2 upgraded
