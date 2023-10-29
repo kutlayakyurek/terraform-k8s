@@ -26,8 +26,11 @@
     %{~ if rke2_kubevip_svc_enable != "" ~}
     rke2_kubevip_svc_enable: ${rke2_kubevip_svc_enable}
     %{~ endif ~}
-    %{~ if rke2_additional_sans != "" ~}
-    rke2_additional_sans: ${rke2_additional_sans}
+    %{~ if length(rke2_additional_sans) > 0 ~}
+    rke2_additional_sans:
+    %{~ for domain in rke2_additional_sans ~}
+      - ${domain}
+    %{~ endfor ~}
     %{~ endif ~}
     %{~ if rke2_apiserver_dest_port != "" ~}
     rke2_apiserver_dest_port: ${rke2_apiserver_dest_port}

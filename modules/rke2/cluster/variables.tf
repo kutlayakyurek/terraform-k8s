@@ -52,8 +52,8 @@ variable "rke2_kubevip_svc_enable" {
 
 # Add additional SANs in k8s API TLS cert
 variable "rke2_additional_sans" {
-  type    = string
-  default = ""
+  type    = list(string)
+  default =  []
 }
 
 # API Server destination port
