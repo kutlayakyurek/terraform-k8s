@@ -8,5 +8,5 @@ module "cluster" {
   rke2_ha_mode_kubevip    = "true"
   rke2_api_ip             = "10.34.104.58"
   rke2_download_kubeconf  = "true"
-  rke2_additional_sans    = ["k8s.infra.arus.com"]
+  rke2_additional_sans    = ["infra-arus.trupt.com.tr"]
 }
