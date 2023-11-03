@@ -53,7 +53,7 @@ variable "rke2_kubevip_svc_enable" {
 # Add additional SANs in k8s API TLS cert
 variable "rke2_additional_sans" {
   type    = list(string)
-  default =  []
+  default = []
 }
 
 # API Server destination port
@@ -315,6 +315,13 @@ variable "rke2_servers_group_name" {
 variable "rke2_agents_group_name" {
   type    = string
   default = "workers"
+}
+
+# (Optional) Additional RKE2 server configuration options
+# You could find the flags at https://docs.rke2.io/install/install_options/install_options/#configuring-rke2-server-nodes
+variable "rke2_server_options" {
+  type    = list(string)
+  default = []
 }
 
 # Cordon, drain the node which is being upgraded. Uncordon the node once the RKE2 upgraded

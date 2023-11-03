@@ -146,6 +146,12 @@
     %{~ if rke2_agents_group_name != "" ~}
     rke2_agents_group_name: ${rke2_agents_group_name}
     %{~ endif ~}
+    %{~ if length(rke2_server_options) > 0 ~}
+    rke2_server_options:
+    %{~ for option in rke2_server_options ~}
+      - ${option}
+    %{~ endfor ~}
+    %{~ endif ~}
     %{~ if rke2_drain_node_during_upgrade != "" ~}
     rke2_drain_node_during_upgrade: ${rke2_drain_node_during_upgrade}
     %{~ endif ~}

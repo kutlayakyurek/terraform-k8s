@@ -9,4 +9,5 @@ module "cluster" {
   rke2_api_ip             = "10.34.104.58"
   rke2_download_kubeconf  = "true"
   rke2_additional_sans    = ["infra-arus.trupt.com.tr"]
+  rke2_server_options     = ["cluster-cidr: '10.42.0.0/16'", "service-cidr: '10.43.0.0/16'"]
 }

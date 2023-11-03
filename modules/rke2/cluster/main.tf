@@ -69,6 +69,7 @@ resource "local_file" "ansible_playbook" {
       rke2_cluster_group_name              = var.rke2_cluster_group_name
       rke2_servers_group_name              = var.rke2_servers_group_name
       rke2_agents_group_name               = var.rke2_agents_group_name
+      rke2_server_options                  = var.rke2_server_options
       rke2_drain_node_during_upgrade       = var.rke2_drain_node_during_upgrade
       rke2_wait_for_all_pods_to_be_ready   = var.rke2_wait_for_all_pods_to_be_ready
       master_nodes_ips                     = var.master_nodes_ips
