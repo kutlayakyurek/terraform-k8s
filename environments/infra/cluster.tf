@@ -1,6 +1,6 @@
 module "cluster" {
   source                     = "../../modules/rke2/cluster"
-  master_nodes_ips           = ["10.34.104.58", "10.34.104.59", "10.34.104.60"]
+  master_nodes_ips           = ["10.34.104.55", "10.34.104.56", "10.34.104.57"]
   remote_sudoer              = "catastrophe"
   rke2_version               = "v1.28.2+rke2r1"
   rke2_ha_mode               = "true"
