@@ -27,6 +27,7 @@ resource "local_file" "ansible_playbook" {
       rke2_ha_mode_keepalived              = var.rke2_ha_mode_keepalived
       rke2_ha_mode_kubevip                 = var.rke2_ha_mode_kubevip
       rke2_api_ip                          = var.rke2_api_ip
+      rke2_api_private_ip                  = var.rke2_api_private_ip
       rke2_loadbalancer_ip_range           = var.rke2_loadbalancer_ip_range
       rke2_kubevip_cloud_provider_enable   = var.rke2_kubevip_cloud_provider_enable
       rke2_kubevip_svc_enable              = var.rke2_kubevip_svc_enable

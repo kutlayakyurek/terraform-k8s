@@ -17,6 +17,9 @@
     %{~ if rke2_api_ip != "" ~}
     rke2_api_ip: ${rke2_api_ip}
     %{~ endif ~}
+    %{~ if rke2_api_private_ip != "" ~}
+    rke2_api_private_ip: ${rke2_api_private_ip}
+    %{~ endif ~}
     %{~ if rke2_loadbalancer_ip_range != "" ~}
     rke2_loadbalancer_ip_range:
         ${rke2_loadbalancer_ip_range}

@@ -32,6 +32,12 @@ variable "rke2_api_ip" {
   default = ""
 }
 
+# optional option for RKE2 Server to listen on a private IP address on port 9345
+variable rke2_api_private_ip {
+  type    = string
+  default = ""
+}
+
 # kubevip load balancer IP range
 variable "rke2_loadbalancer_ip_range" {
   type    = string
