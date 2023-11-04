@@ -18,7 +18,8 @@
     rke2_api_ip: ${rke2_api_ip}
     %{~ endif ~}
     %{~ if rke2_loadbalancer_ip_range != "" ~}
-    rke2_loadbalancer_ip_range: ${rke2_loadbalancer_ip_range}
+    rke2_loadbalancer_ip_range:
+        ${rke2_loadbalancer_ip_range}
     %{~ endif ~}
     %{~ if rke2_kubevip_cloud_provider_enable != "" ~}
     rke2_kubevip_cloud_provider_enable: ${rke2_kubevip_cloud_provider_enable}
