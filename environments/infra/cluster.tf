@@ -5,6 +5,7 @@ module "cluster" {
   rke2_version               = "v1.28.2+rke2r1"
   rke2_ha_mode               = "true"
   rke2_ha_mode_kubevip       = "true"
+  rke2_ha_mode_keepalived    = "false"
   rke2_api_ip                = "172.22.0.1"
   rke2_download_kubeconf     = "true"
   rke2_additional_sans       = ["infra-arus.trupt.com.tr"]
