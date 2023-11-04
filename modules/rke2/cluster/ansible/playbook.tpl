@@ -150,7 +150,7 @@
     %{~ if length(rke2_server_options) > 0 ~}
     rke2_server_options:
     %{~ for option in rke2_server_options ~}
-      - ${option}
+      - "${option}"
     %{~ endfor ~}
     %{~ endif ~}
     %{~ if rke2_drain_node_during_upgrade != "" ~}
