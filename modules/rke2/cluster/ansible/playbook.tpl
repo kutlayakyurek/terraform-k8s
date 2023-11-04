@@ -90,11 +90,8 @@
     %{~ if rke2_channel != "" ~}
     rke2_channel: ${rke2_channel}
     %{~ endif ~}
-    %{~ if length(rke2_disable) > 0 ~}
-    rke2_disable:
-    %{~ for component in rke2_disable ~}
-      - ${component}
-    %{~ endfor ~}
+    %{~ if rke2_disable != "" ~}
+    rke2_disable: ${rke2_disable}
     %{~ endif ~}
     %{~ if disable_kube_proxy != "" ~}
     disable_kube_proxy: ${disable_kube_proxy}

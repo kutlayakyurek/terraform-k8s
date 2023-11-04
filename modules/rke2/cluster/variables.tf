@@ -178,8 +178,8 @@ variable "rke2_channel" {
 # Do not deploy packaged components and delete any deployed components
 # Valid items: rke2-canal, rke2-coredns, rke2-ingress-nginx, rke2-metrics-server
 variable "rke2_disable" {
-  type    = list(string)
-  default = []
+  type    = string
+  default = ""
 }
 
 # Option to disable kube-proxy
