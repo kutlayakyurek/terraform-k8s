@@ -8,7 +8,7 @@ module "cluster" {
   rke2_ha_mode_keepalived    = "false"
   rke2_api_ip                = "10.193.0.1"
   rke2_download_kubeconf     = "true"
-  rke2_additional_sans       = ["infra-arus.trupt.com.tr", "10.192.0.1"]
+  rke2_additional_sans       = ["infra-arus.trupt.com.tr", "10.193.0.1"]
   rke2_server_options        = ["cluster-cidr: 10.190.0.0/16", "service-cidr: 10.191.0.0/16"]
   rke2_loadbalancer_ip_range = "cidr-global: 10.192.0.0/22"
   rke2_disable               = "rke2-ingress-nginx"
