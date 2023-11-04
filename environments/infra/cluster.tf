@@ -6,7 +6,7 @@ module "cluster" {
   rke2_ha_mode               = "true"
   rke2_ha_mode_kubevip       = "true"
   rke2_ha_mode_keepalived    = "false"
-  rke2_api_ip                = "infra-arus.trupt.com.tr" # TODO this is registry machine with dnsmasq.. need proper load balancer mechanism
+  rke2_api_ip                = "10.34.104.55" # TODO need proper load balancer mechanism and fixed registration address
   rke2_download_kubeconf     = "true"
   rke2_additional_sans       = ["infra-arus.trupt.com.tr"]
   rke2_server_options        = ["cluster-cidr: 10.190.0.0/16", "service-cidr: 10.191.0.0/16"]
