@@ -212,8 +212,11 @@ variable "rke2_static_pods" {
 #   endpoint: {}
 #   rewrite: '"^rancher/(.*)": "mirrorproject/rancher-images/$1"'
 variable "rke2_custom_registry_mirrors" {
-  type    = string
-  default = ""
+  type = list(object({
+    name     = string
+    endpoint = string
+  }))
+  default = []
 }
 
 # Configure custom Containerd Registry additional configuration

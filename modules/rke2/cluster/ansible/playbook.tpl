@@ -105,8 +105,13 @@
     %{~ if rke2_static_pods != "" ~}
     rke2_static_pods: ${rke2_static_pods}
     %{~ endif ~}
-    %{~ if rke2_custom_registry_mirrors != "" ~}
-    rke2_custom_registry_mirrors: ${rke2_custom_registry_mirrors}
+    %{~ if length(rke2_custom_registry_mirrors) > 0 ~}
+    rke2_custom_registry_mirrors:
+    %{~ for mirror in rke2_custom_registry_mirrors ~}
+      - name: ${mirror.name}
+        endpoint:
+         - ${mirror.endpoint}
+    %{~ endfor ~}
     %{~ endif ~}
     %{~ if rke2_custom_registry_configs != "" ~}
     rke2_custom_registry_configs: ${rke2_custom_registry_configs}
