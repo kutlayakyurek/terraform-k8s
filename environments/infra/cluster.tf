@@ -15,7 +15,7 @@ module "cluster" {
   rke2_custom_registry_mirrors = [
     {
       name     = "docker.io"
-      endpoint = "nexus-arus.trupt.com.tr:8083"
+      endpoint = "http://nexus-arus.trupt.com.tr:8083"
     }
   ]
 }
